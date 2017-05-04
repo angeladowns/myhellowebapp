@@ -1,14 +1,30 @@
+{% extends 'base.html' %}
 {% load staticfiles %}
-<!doctype html>
-<html>
-<head>
-  <title>My Hello Web App Project</title>
-  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans" rel="stylesheet">
-</head>
-<body>
+{% load humanize %}
+
+{% block title %}
+  Homepage - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
   <img src="{% static 'images/map-marker.png' %}" alt="map marker" />
   <h1>Hello World!</h1>
-  <p>I am a basic website.</p>
-</body>
-</html>
+  <p>I am here.</p>
+  <p>{{ number }}</p>
+  <p>{% if number %}Number exists!{% endif %}</p>
+  <p>There are six dogs! <b>
+    {% if number == 6 %}
+    True
+    {% else %}
+    False
+    {% endif %}
+  </b></p>
+  <p>There are {{ number }} dog{{ number|pluralize }}!</p>
+  <p>There are {{ number }} walrus{{ number|pluralize:"es" }}.</p>
+  <p>There are {{ number|apnumber }} dogs!</p>
+  <p>This is my name {{ thing }}</p>
+  <p>This is my name: {{ thing|slugify }}</p>
+  <p>This is my name: {{ thing|title }}</p>
+  <p>This is my name: {{ thing|truncatewords:1 }}</p>
+
+{% endblock content %}

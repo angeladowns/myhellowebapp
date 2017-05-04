@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+  About - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+  <img src="{% static 'images/map-marker.png' %}" alt="map marker" />
+  <h1>About Page</h1>
+  <p>About content that is about the content, such as it is.</p>
+{% endblock content %}
