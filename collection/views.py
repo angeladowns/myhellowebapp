@@ -7,11 +7,3 @@ def index(request):
     return render(request, 'index.html', {
     'films': films,
     })
-    # defining the variable
-    number = 6
-    thing = "Thing name"
-    # this is your new view
-    return render(request, 'index.html', {
-        'number': number,
-        'thing': thing,
-    })
