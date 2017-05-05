@@ -7,24 +7,9 @@
 {% endblock title %}
 
 {% block content %}
-  <img src="{% static 'images/map-marker.png' %}" alt="map marker" />
-  <h1>Hello World!</h1>
-  <p>I am here.</p>
-  <p>{{ number }}</p>
-  <p>{% if number %}Number exists!{% endif %}</p>
-  <p>There are six dogs! <b>
-    {% if number == 6 %}
-    True
-    {% else %}
-    False
-    {% endif %}
-  </b></p>
-  <p>There are {{ number }} dog{{ number|pluralize }}!</p>
-  <p>There are {{ number }} walrus{{ number|pluralize:"es" }}.</p>
-  <p>There are {{ number|apnumber }} dogs!</p>
-  <p>This is my name {{ thing }}</p>
-  <p>This is my name: {{ thing|slugify }}</p>
-  <p>This is my name: {{ thing|title }}</p>
-  <p>This is my name: {{ thing|truncatewords:1 }}</p>
-
+  <img src="{% static 'images/movie-camera.png' %}" alt="movie camera icon" />
+  {% for film in films %}
+  <h2>{{ film.name }}</h2>
+  <p>{{ film.description }}</p>
+  {% endfor %}
 {% endblock content %}
