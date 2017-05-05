@@ -7,7 +7,6 @@
 {% endblock title %}
 
 {% block content %}
-  <img src="{% static 'images/movie-camera.png' %}" alt="movie camera icon" />
   {% for film in films %}
   <h2>{{ film.name }}</h2>
   <p>{{ film.description }}</p>
