@@ -1,6 +1,8 @@
 from django.contrib import admin
+
 # import your model
 from collection.models import Film
+
 # set up automated slug creation
 class FilmAdmin(admin.ModelAdmin):
     model = Film
