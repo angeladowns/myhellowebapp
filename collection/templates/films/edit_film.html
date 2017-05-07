@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Edit {{ film.name }} - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+    <h1>Edit "{{ film.name }}"</h1>
+    <form role="form" action="" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Submit</button>
+    </form>
+{% endblock %}

@@ -8,4 +8,3 @@ class FilmAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
 
 admin.site.register(Film, FilmAdmin)
-# Register your models here.

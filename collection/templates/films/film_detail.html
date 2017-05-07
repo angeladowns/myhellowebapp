@@ -3,10 +3,13 @@
 {% load humanize %}
 
 {% block title %}
-  {{ film.name }} - {{ block.super }}
+    {{ film.name }} - {{ block.super }}
 {% endblock title %}
 
 {% block content %}
-  <h2>{{ film.name }}</h2>
-  <p>{{ film.description }}</p>
+    <h2>{{ film.name }}</h2>
+    <p>{{ film.description }}</p>
+    <a href="{% url 'edit_film' slug=film.slug %}">
+      Edit me!
+    </a>
 {% endblock content %}
