@@ -9,7 +9,11 @@
 {% block content %}
     <h2>{{ film.name }}</h2>
     <p>{{ film.description }}</p>
-    <a href="{% url 'edit_film' slug=film.slug %}">
-      Edit me!
-    </a>
+    {% if user == film.user %}
+        <p>
+          <a href="{% url 'edit_film' slug=film.slug %}">
+          Edit me!
+        </a>
+      </p>
+    {% endif %}
 {% endblock content %}
