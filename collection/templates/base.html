@@ -21,6 +21,7 @@
         <li><a href="{% url 'home' %}">Home</a></li>
         <li><a href="{% url 'about' %}">About</a></li>
         <li><a href="{% url 'contact' %}">Contact</a></li>
+        <li><a href="{% url 'browse' %}">Browse</a></li>
         {% if user.is_authenticated %}
         <li>
           <a href="{% url 'password_change' %}">Update Password</a>

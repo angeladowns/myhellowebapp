@@ -62,3 +62,15 @@ def create_film(request):
     return render(request, 'films/create_film.html', {
             'form': form,
     })
+
+def browse_by_name(request, initial=None):
+    if initial:
+        films = Film.objects.filter(
+            name__istartswith=initial).order_by('name')
+    else:
+        films = Film.objects.all().order_by('name')
+
+    return render(request, 'search/search.html', {
+        'films': films,
+        'initial': initial,
+    })
