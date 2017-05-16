@@ -8,7 +8,7 @@
 
 {% block content %}
   {% for film in films %}
-  <h2><a href="{% url 'film_detail' slug=film.slug %}">{{ film.name }}</a></h2>
+  <h2><i class="fa fa-ticket" aria-hidden="true"></i> <a href="{% url 'film_detail' slug=film.slug %}">{{ film.name }}</a></h2>
   <p>{{ film.description }}</p>
   {% endfor %}
 {% endblock content %}

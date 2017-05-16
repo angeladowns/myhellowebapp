@@ -7,7 +7,7 @@
 {% endblock title %}
 
 {% block content %}
-    <h2>{{ film.name }}</h2>
+    <h2><i class="fa fa-ticket" aria-hidden="true"></i> {{ film.name }}</h2>
     <p>{{ film.description }}</p>
     {% if user == film.user %}
         <p>
