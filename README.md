@@ -31,4 +31,7 @@ According to [DiveIntoPython](http://www.diveintopython.net/getting_to_know_pyth
 Chapter 11 ends with a challenge to figure out how to add the ability for logged in users to change or update their password using the password_change templates created in Chapter 10. Even though I knew the answer, I did not trust myself and spent too much time over-thinking it. Don't be like me. Create the urls, add the link, and move on.
 
 #### Chapter 13: Quick Hits
-After running `pip freeze`, I noticed `wsgiref==0.1.2` was not listed. According to [this post](http://discuss.hellowebapp.com/t/missing-wsgiref-0-1-2-when-i-pip-freeze/32), it is installed automatically with Python and is not needed in the requirements.txt file. 
+After running `pip freeze`, I noticed `wsgiref==0.1.2` was not listed. According to [this post](http://discuss.hellowebapp.com/t/missing-wsgiref-0-1-2-when-i-pip-freeze/32), it is installed automatically with Python and is not needed in the requirements.txt file.
+
+#### Chapter 14: Deploying Your Web App
+If you already have apps on Heroku, you can skip ahead to "Installing a few extra packages." And, a word of caution, make sure you are in the myhellowebapp directory before running `heroku create`. 
