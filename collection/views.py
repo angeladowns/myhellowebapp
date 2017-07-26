@@ -18,8 +18,12 @@ def index(request):
 
 def film_detail(request, slug):
     film = Film.objects.get(slug=slug)
+    # grab all the objects social media accounts
+    social_accounts = film.social_accounts.all()
+    # pass it to the template
     return render(request, 'films/film_detail.html', {
         'film': film,
+        'social_accounts': social_accounts,
     })
 
 @login_required
