@@ -4,6 +4,7 @@ from django.shortcuts import render, redirect
 from django.template.defaultfilters import slugify
 from django.template.loader import get_template
 from django.core.mail import EmailMessage
+from django.core.mail import mail_admins
 from django.template import Context
 
 from collection.forms import FilmForm
@@ -12,6 +13,10 @@ from collection.models import Film
 
 def index(request):
     films = Film.objects.all()
+
+    # uncomment below to test the mail_admins feature!
+    mail_admins("Our subject line", "Our content")
+    
     return render(request, 'index.html', {
         'films': films,
     })

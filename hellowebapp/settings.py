@@ -138,3 +138,12 @@ EMAIL_USE_TLS = False
 EMAIL_PORT = 1025
 
 LOGIN_REDIRECT_URL = 'home'
+
+# the email address that the "server emails" will come from
+SERVER_EMAIL = 'app_email@mydomain.com'
+
+# the email you want these admin emails to go to
+# (can add as many as you like)
+ADMINS = [
+    ('Angela Downs', 'me@mydomain.com'),
+]
